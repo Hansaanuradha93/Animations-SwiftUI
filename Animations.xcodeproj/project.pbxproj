@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4789513529B5E831006B4179 /* ClubbedAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4789513429B5E831006B4179 /* ClubbedAnimation.swift */; };
 		47EE3D1629B4F4CA00FBAAF4 /* AnimationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE3D1529B4F4CA00FBAAF4 /* AnimationsApp.swift */; };
 		47EE3D1829B4F4CA00FBAAF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE3D1729B4F4CA00FBAAF4 /* ContentView.swift */; };
 		47EE3D1A29B4F4CC00FBAAF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47EE3D1929B4F4CC00FBAAF4 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4789513429B5E831006B4179 /* ClubbedAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubbedAnimation.swift; sourceTree = "<group>"; };
 		47EE3D1229B4F4CA00FBAAF4 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47EE3D1529B4F4CA00FBAAF4 /* AnimationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsApp.swift; sourceTree = "<group>"; };
 		47EE3D1729B4F4CA00FBAAF4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +36,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4789513329B5E7FD006B4179 /* Single Meta Ball */ = {
+			isa = PBXGroup;
+			children = (
+				47EE3D2429B4F5C100FBAAF4 /* SingleMetaBallAnimation.swift */,
+			);
+			path = "Single Meta Ball";
+			sourceTree = "<group>";
+		};
+		4789513629B5E839006B4179 /* Clubbed */ = {
+			isa = PBXGroup;
+			children = (
+				4789513429B5E831006B4179 /* ClubbedAnimation.swift */,
+			);
+			path = Clubbed;
+			sourceTree = "<group>";
+		};
 		47EE3D0929B4F4CA00FBAAF4 = {
 			isa = PBXGroup;
 			children = (
@@ -73,7 +91,8 @@
 		47EE3D2329B4F5B000FBAAF4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				47EE3D2429B4F5C100FBAAF4 /* SingleMetaBallAnimation.swift */,
+				4789513629B5E839006B4179 /* Clubbed */,
+				4789513329B5E7FD006B4179 /* Single Meta Ball */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -149,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47EE3D1829B4F4CA00FBAAF4 /* ContentView.swift in Sources */,
+				4789513529B5E831006B4179 /* ClubbedAnimation.swift in Sources */,
 				47EE3D2529B4F5C100FBAAF4 /* SingleMetaBallAnimation.swift in Sources */,
 				47EE3D1629B4F4CA00FBAAF4 /* AnimationsApp.swift in Sources */,
 			);

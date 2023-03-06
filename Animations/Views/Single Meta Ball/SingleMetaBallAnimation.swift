@@ -11,7 +11,7 @@ struct SingleMetaBallAnimation: View {
     
     var body: some View {
         
-        // MARK: Single MetaBall Aniamation
+        // MARK: Single MetaBall Animation
         VStack {
             SingleMetaBall()
         }
@@ -51,7 +51,7 @@ struct SingleMetaBall: View {
                     context.drawLayer { ctx in
                         
                         /// Placing symbols
-                        for index in [1, 2] {
+                        for index in 1...2 {
                             
                             if let resolvedView = context.resolveSymbol(id: index) {
                                 
