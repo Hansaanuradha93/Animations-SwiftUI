@@ -33,7 +33,7 @@ struct ClubbedView: View {
     var body: some View {
         
         Rectangle()
-            .fill(.linearGradient(colors: Gradients.tealToDarkYellow, startPoint: .top, endPoint: .bottom))
+            .fill(Gradients.tealToDarkYellowTopToBottom)
             .mask {
                 // Time determines for how long the animation needs to be changed
                 TimelineView(.animation(minimumInterval: 3.6, paused: false)) { _ in

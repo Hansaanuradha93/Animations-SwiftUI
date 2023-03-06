@@ -13,5 +13,5 @@ struct Theme {
 }
 
 struct Gradients {
-    static let tealToDarkYellow = [Theme.teal, Theme.darkYellow]
+    static let tealToDarkYellowTopToBottom = LinearGradient(colors: [Theme.teal, Theme.darkYellow], startPoint: .top, endPoint: .bottom)
 }
