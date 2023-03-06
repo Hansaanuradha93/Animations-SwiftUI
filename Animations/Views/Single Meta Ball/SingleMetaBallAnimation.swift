@@ -35,7 +35,7 @@ struct SingleMetaBall: View {
         
         /// If you need gradient color, then use mask
         Rectangle()
-            .fill(.linearGradient(colors: [Color("Gradient1"), Color("Gradient2")], startPoint: .top, endPoint: .bottom))
+            .fill(.linearGradient(colors: Gradients.tealToDarkYellow, startPoint: .top, endPoint: .bottom))
             .mask {
                 
                 Canvas { context, size in
