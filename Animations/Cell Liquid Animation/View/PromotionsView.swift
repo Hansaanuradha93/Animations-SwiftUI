@@ -30,7 +30,7 @@ struct PromotionsView: View {
                     
                     GooeyCell(promotion: promotion) {
 
-
+                        
                     }
                 }
             }
@@ -82,6 +82,8 @@ struct GooeyCell: View {
     
     // MARK: Animation Properties
     @State var offsetX: CGFloat = 0
+    @State var cardOffset: CGFloat = 0
+    @State var finishAnimation: Bool = false
     
     var body: some View {
         let cardWidth = screenSize().width - 35
@@ -127,7 +129,7 @@ struct GooeyCell: View {
             }
             .padding(.horizontal, 15)
             .contentShape(Rectangle())
-            .offset(x: offsetX)
+            .offset(x: cardOffset)
             .gesture(
                 DragGesture()
                     .onChanged({ value in
@@ -141,13 +143,40 @@ struct GooeyCell: View {
                         /// Stopping The Card End
                         let absoluteTranslationValue = -translation
                         translation = (absoluteTranslationValue < cardWidth) ? translation : -cardWidth
+                        
                         offsetX = translation
+                        cardOffset = offsetX
                         
                     }).onEnded({ value in
-
-                        withAnimation(.easeInOut(duration: 0.3)) {
-                            offsetX = .zero
+                        
+                        /// Release Animation
+                        if -value.translation.width > screenSize().width * 0.6 {
+                            
+                            /// Haptic Feedback
+                            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                            
+                            finishAnimation = true
+                            
+                            /// Moving Card Outside Of The Screen
+                            withAnimation(.easeOut(duration: 0.3)) {
+                                cardOffset = -screenSize().width
+                            }
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                
+                                onDelete()
+                            }
+                            
+                        } else {
+                            
+                            withAnimation(.easeInOut(duration: 0.3)) {
+                                offsetX = .zero
+                                cardOffset = .zero
+                            }
                         }
+                        
+                        
+                        
                     })
             )
         }
@@ -188,6 +217,9 @@ struct GooeyCell: View {
                 .offset(x: (-circleOffset < 1.0 ? circleOffset : -1.0) * 42)
                 .offset(x: offsetX * 0.2)
                 .offset(x: 8)
+                .offset(x: finishAnimation ? -200 : 0)
+                .opacity(finishAnimation ? 0 : 1)
+                .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 1), value: finishAnimation)
         }
     }
     
@@ -195,7 +227,7 @@ struct GooeyCell: View {
     func GooeyView() -> some View {
         
         let width = screenSize().width * 0.8
-        let scale = offsetX / width
+        let scale = finishAnimation ? -0.0001 : offsetX / width
         let circleOffset = offsetX / width
         
         Theme.Shapes.tailShape
@@ -206,19 +238,22 @@ struct GooeyCell: View {
             /// Adding Y Scaling
             .scaleEffect(y: 1 + (-scale / 5), anchor: .center)
             /// Adding Icon View
+            .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7), value: finishAnimation)
             .overlay(alignment: .trailing, content: {
                 
                 Circle()
                     .frame(width: 42, height: 42)
                     /// Moving View Inside
                     .offset(x: 42)
+                    .scaleEffect(finishAnimation ? 0.001 : 1, anchor: .leading)
                     .offset(x: (-circleOffset < 1.0 ? circleOffset : -1.0) * 42)
                     .offset(x: offsetX * 0.2)
+                    .offset(x: finishAnimation ? -200 : 0)
+                    .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 1), value: finishAnimation)
                     
             })
             .frame(maxWidth: .infinity, alignment: .trailing)
             .offset(x: 8)
-        
     }
 }
 
