@@ -42,7 +42,7 @@ struct ClubbedView: View {
     var body: some View {
         
         Rectangle()
-            .fill(Gradients.tealToDarkYellowTopToBottom)
+            .fill(Theme.Gradients.tealToDarkYellowTopToBottom)
             .mask {
                 // Time determines for how long the animation needs to be changed
                 TimelineView(.animation(minimumInterval: 3.6, paused: false)) { _ in

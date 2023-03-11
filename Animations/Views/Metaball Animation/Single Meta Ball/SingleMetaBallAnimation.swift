@@ -44,7 +44,7 @@ struct SingleMetaBall: View {
         
         /// If you need gradient color, then use mask
         Rectangle()
-            .fill(Gradients.tealToDarkYellowTopToBottom)
+            .fill(Theme.Gradients.tealToDarkYellowTopToBottom)
             .mask {
                 
                 Canvas { context, size in
