@@ -11,8 +11,8 @@ import SwiftUI
 struct AnimationsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .preferredColorScheme(.dark)
+            PromotionsView()
+                .preferredColorScheme(.light)
         }
     }
 }

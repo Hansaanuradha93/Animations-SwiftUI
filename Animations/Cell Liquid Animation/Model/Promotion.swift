@@ -8,7 +8,7 @@
 import SwiftUI
 
 // MARK: Promotion Model
-struct Promotion: Identifiable{
+struct Promotion: Identifiable {
     var id: String = UUID().uuidString
     var name: String
     var title: String

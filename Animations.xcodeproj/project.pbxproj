@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		474370E729BC5B33000BF726 /* Promotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474370E629BC5B33000BF726 /* Promotion.swift */; };
+		474370E929BC5BA7000BF726 /* PromotionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474370E829BC5BA7000BF726 /* PromotionsView.swift */; };
 		4789513529B5E831006B4179 /* ClubbedAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4789513429B5E831006B4179 /* ClubbedAnimation.swift */; };
 		4789513E29B5F0F7006B4179 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4789513D29B5F0F7006B4179 /* Theme.swift */; };
 		47EE3D1629B4F4CA00FBAAF4 /* AnimationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE3D1529B4F4CA00FBAAF4 /* AnimationsApp.swift */; };
-		47EE3D1829B4F4CA00FBAAF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE3D1729B4F4CA00FBAAF4 /* ContentView.swift */; };
 		47EE3D1A29B4F4CC00FBAAF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47EE3D1929B4F4CC00FBAAF4 /* Assets.xcassets */; };
 		47EE3D1D29B4F4CC00FBAAF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47EE3D1C29B4F4CC00FBAAF4 /* Preview Assets.xcassets */; };
 		47EE3D2529B4F5C100FBAAF4 /* SingleMetaBallAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE3D2429B4F5C100FBAAF4 /* SingleMetaBallAnimation.swift */; };
@@ -19,11 +19,11 @@
 
 /* Begin PBXFileReference section */
 		474370E629BC5B33000BF726 /* Promotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promotion.swift; sourceTree = "<group>"; };
+		474370E829BC5BA7000BF726 /* PromotionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsView.swift; sourceTree = "<group>"; };
 		4789513429B5E831006B4179 /* ClubbedAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubbedAnimation.swift; sourceTree = "<group>"; };
 		4789513D29B5F0F7006B4179 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		47EE3D1229B4F4CA00FBAAF4 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47EE3D1529B4F4CA00FBAAF4 /* AnimationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsApp.swift; sourceTree = "<group>"; };
-		47EE3D1729B4F4CA00FBAAF4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		47EE3D1929B4F4CC00FBAAF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47EE3D1C29B4F4CC00FBAAF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		47EE3D2429B4F5C100FBAAF4 /* SingleMetaBallAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMetaBallAnimation.swift; sourceTree = "<group>"; };
@@ -69,6 +69,7 @@
 		474370E529BC5AEB000BF726 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				474370E829BC5BA7000BF726 /* PromotionsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -93,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				47EE3D1929B4F4CC00FBAAF4 /* Assets.xcassets */,
-				47EE3D1729B4F4CA00FBAAF4 /* ContentView.swift */,
 				47EE3D1529B4F4CA00FBAAF4 /* AnimationsApp.swift */,
 			);
 			name = App;
@@ -221,7 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47EE3D1829B4F4CA00FBAAF4 /* ContentView.swift in Sources */,
+				474370E929BC5BA7000BF726 /* PromotionsView.swift in Sources */,
 				4789513E29B5F0F7006B4179 /* Theme.swift in Sources */,
 				4789513529B5E831006B4179 /* ClubbedAnimation.swift in Sources */,
 				47EE3D2529B4F5C100FBAAF4 /* SingleMetaBallAnimation.swift in Sources */,
@@ -363,6 +363,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -392,6 +393,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
