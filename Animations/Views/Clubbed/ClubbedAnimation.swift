@@ -66,7 +66,6 @@ struct ClubbedView: View {
                             
                             /// Generating custom offset for each time
                             /// Thus it will be at random places and clubbed with each other
-                            
                             let size = CGSize(width: .random(in: -180...180), height: .random(in: -240...240))
                             let offset = startAnimation ? size : .zero
                         
