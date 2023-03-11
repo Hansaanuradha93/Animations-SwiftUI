@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+/**
+ The ClubbedAnimation class is responsible for single metaball animation.
+ 
+ - Parameters:
+ - Youtube: https://www.youtube.com/watch?v=hfKGLJejAEw&list=WL&index=17
+ - Source Code: https://www.patreon.com/posts/early-access-in-72304918
+
+**/
+
 struct SingleMetaBallAnimation: View {
     
     var body: some View {

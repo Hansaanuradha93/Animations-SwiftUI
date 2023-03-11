@@ -38,6 +38,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		474370E229BC5554000BF726 /* Metaball Animation */ = {
+			isa = PBXGroup;
+			children = (
+				4789513629B5E839006B4179 /* Clubbed */,
+				4789513329B5E7FD006B4179 /* Single Meta Ball */,
+			);
+			path = "Metaball Animation";
+			sourceTree = "<group>";
+		};
 		4789513329B5E7FD006B4179 /* Single Meta Ball */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +127,7 @@
 		47EE3D2329B4F5B000FBAAF4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4789513629B5E839006B4179 /* Clubbed */,
-				4789513329B5E7FD006B4179 /* Single Meta Ball */,
+				474370E229BC5554000BF726 /* Metaball Animation */,
 			);
 			path = Views;
 			sourceTree = "<group>";

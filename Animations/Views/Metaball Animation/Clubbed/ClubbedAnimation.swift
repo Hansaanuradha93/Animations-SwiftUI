@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+/**
+ The ClubbedAnimation class is responsible for several rectangles animation.
+ 
+ - Parameters:
+ - Youtube: https://www.youtube.com/watch?v=hfKGLJejAEw&list=WL&index=17
+ - Source Code: https://www.patreon.com/posts/early-access-in-72304918
+
+**/
+
 struct ClubbedAnimation: View {
     
     var body: some View {
