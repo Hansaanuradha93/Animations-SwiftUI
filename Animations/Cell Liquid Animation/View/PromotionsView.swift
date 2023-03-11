@@ -30,7 +30,10 @@ struct PromotionsView: View {
                     
                     GooeyCell(promotion: promotion) {
 
-                        
+                        let _ = withAnimation(.easeIn(duration: 0.3)) {
+                            
+                            promotions.remove(at: indexOf(promotion: promotion))
+                        }
                     }
                 }
             }
@@ -41,6 +44,17 @@ struct PromotionsView: View {
             Theme.Colors.bgGray
                 .ignoresSafeArea()
         )
+    }
+    
+    func indexOf(promotion: Promotion) -> Int {
+        
+        if let index = promotions.firstIndex(where: { pr in
+            promotion.id == pr.id
+        }) {
+            return index
+        }
+            
+        return 0
     }
     
     
@@ -87,6 +101,7 @@ struct GooeyCell: View {
     
     var body: some View {
         let cardWidth = screenSize().width - 35
+        let progress = -offsetX * 0.8 / screenSize().width
 
         ZStack(alignment: .trailing) {
             
@@ -127,6 +142,8 @@ struct GooeyCell: View {
                 RoundedRectangle(cornerRadius: 15, style: .continuous)
                     .fill(.white.opacity(0.7))
             }
+            .opacity(1.0 - progress)
+            .blur(radius: progress * 5.0)
             .padding(.horizontal, 15)
             .contentShape(Rectangle())
             .offset(x: cardOffset)
@@ -187,7 +204,6 @@ struct GooeyCell: View {
     func CanvasView() -> some View {
         
         let width = screenSize().width * 0.8
-        let scale = offsetX / width
         let circleOffset = offsetX / width
         
         Canvas { ctx, size in
