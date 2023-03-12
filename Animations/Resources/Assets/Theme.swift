@@ -18,6 +18,7 @@ struct Theme {
         // MARK: Cell Liquid Animation
         static let bgGray = Color("Bg-Gray")
         static let green = Color("Green")
+        static let cellBg = Color("Cell-BG")
     }
     
     struct Gradients {
@@ -38,3 +39,5 @@ struct Theme {
         static let xmark = Image(systemName: "xmark")
     }
 }
+
+//141617

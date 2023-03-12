@@ -12,7 +12,7 @@ struct AnimationsApp: App {
     var body: some Scene {
         WindowGroup {
             AnimationsView()
-                .preferredColorScheme(.light)
+//                .preferredColorScheme(.light)
         }
     }
 }

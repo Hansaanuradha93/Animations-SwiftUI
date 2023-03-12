@@ -132,11 +132,11 @@ struct GooeyCell: View {
                         Text(animation.name)
                             .font(.callout)
                             .fontWeight(.semibold)
-                        
+                            .foregroundColor(.secondary)
                     }
                     
                     Text(animation.title)
-                        .foregroundColor(.black.opacity(0.8))
+                        .foregroundColor(.secondary.opacity(0.7))
                     
                     Text(animation.subTitle)
                         .font(.caption)
@@ -153,7 +153,7 @@ struct GooeyCell: View {
             .padding(.vertical, 10)
             .background {
                 RoundedRectangle(cornerRadius: 15, style: .continuous)
-                    .fill(.white.opacity(0.7))
+                    .fill(Theme.Colors.cellBg)
             }
             .opacity(1.0 - progress)
             .blur(radius: progress * 5.0)
