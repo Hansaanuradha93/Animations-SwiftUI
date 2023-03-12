@@ -11,12 +11,14 @@ struct AnimationsView: View {
 
     @State var animations = Animation.animations
     
+    private let columns = Array(repeating: GridItem(.flexible()), count: 1)
+    
     var body: some View {
        
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
                 
-                VStack(spacing: 12) {
+                LazyVStack(spacing: 12) {
                     
                     HeaderView()
                         .padding(15)
