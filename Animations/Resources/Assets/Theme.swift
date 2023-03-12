@@ -29,19 +29,12 @@ struct Theme {
     struct Assets {
         
         // MARK: Cell Liquid Animation
-        static let logo1 = Image("Logo-1")
-        static let logo2 = Image("Logo-2")
-        static let logo3 = Image("Logo-3")
-        static let logo4 = Image("Logo-4")
-        static let logo5 = Image("Logo-5")
+        static let cellLiquid = Image("cell-liquid")
+        static let clubbed = Image("clubbed")
+        static let singleMetaball = Image("single-metaball")
+        static let tailShape = Image("tail-shape")
         
         static let magnifyingGlass = Image(systemName: "magnifyingglass")
-        
         static let xmark = Image(systemName: "xmark")
-    }
-    
-    struct Shapes {
-        
-        static let tailShape = Image("tail-shape")
     }
 }

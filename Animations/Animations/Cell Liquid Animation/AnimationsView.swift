@@ -7,15 +7,9 @@
 
 import SwiftUI
 
-struct PromotionsView: View {
-    
-    @State var promotions: [Promotion] = [
-        .init(name: "TripAdvisor", title: "Your saved search to Vienna", subTitle: placeholderText, logo: "Logo-1"),
-        .init(name: "Figma", title: "Figma @mentions are here!", subTitle: placeholderText, logo: "Logo-2"),
-        .init(name: "Product Hunt Daily", title: "Must-have Chrome Extensions", subTitle: placeholderText, logo: "Logo-3"),
-        .init(name: "invision", title: "First interview with a designer I admire", subTitle: placeholderText, logo: "Logo-4"),
-        .init(name: "Pinterest", title: "You’ve got 18 new ideas waiting for you!", subTitle: placeholderText, logo: "Logo-5"),
-    ]
+struct AnimationsView: View {
+
+    @State var animations = Animation.animations
     
     var body: some View {
        
@@ -26,13 +20,13 @@ struct PromotionsView: View {
                 HeaderView()
                     .padding(15)
                 
-                ForEach(promotions) { promotion in
+                ForEach(animations) { animation in
                     
-                    GooeyCell(promotion: promotion) {
+                    GooeyCell(animation: animation) {
 
                         let _ = withAnimation(.easeIn(duration: 0.3)) {
-                            
-                            promotions.remove(at: indexOf(promotion: promotion))
+                        
+                            animations.remove(at: indexOf(animation: animation))
                         }
                     }
                 }
@@ -46,10 +40,10 @@ struct PromotionsView: View {
         )
     }
     
-    func indexOf(promotion: Promotion) -> Int {
+    func indexOf(animation: Animation) -> Int {
         
-        if let index = promotions.firstIndex(where: { pr in
-            promotion.id == pr.id
+        if let index = animations.firstIndex(where: { anims in
+            animation.id == anims.id
         }) {
             return index
         }
@@ -63,7 +57,7 @@ struct PromotionsView: View {
         
         HStack {
             
-            Text("Promotions")
+            Text("Animations")
                 .font(.system(size: 28, weight: .bold))
                 .foregroundColor(Theme.Colors.green)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -82,16 +76,16 @@ struct PromotionsView: View {
     }
 }
 
-struct PromotionsView_Previews: PreviewProvider {
+struct AnimationsView_Previews: PreviewProvider {
     static var previews: some View {
-        PromotionsView()
+        AnimationsView()
     }
 }
 
 // MARK: - Promotion Card View With Gooey Cell Animation
 struct GooeyCell: View {
     
-    var promotion: Promotion
+    var animation: Animation
     var onDelete: () -> ()
     
     // MARK: Animation Properties
@@ -111,21 +105,21 @@ struct GooeyCell: View {
                 VStack(alignment: .leading, spacing: 12) {
                     HStack {
                         
-                        Image(promotion.logo)
+                        Image(animation.logo)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 22, height: 22)
                         
-                        Text(promotion.name)
+                        Text(animation.name)
                             .font(.callout)
                             .fontWeight(.semibold)
                         
                     }
                     
-                    Text(promotion.title)
+                    Text(animation.title)
                         .foregroundColor(.black.opacity(0.8))
                     
-                    Text(promotion.subTitle)
+                    Text(animation.subTitle)
                         .font(.caption)
                         .foregroundColor(.gray)
                 }
@@ -246,7 +240,7 @@ struct GooeyCell: View {
         let scale = finishAnimation ? -0.0001 : offsetX / width
         let circleOffset = offsetX / width
         
-        Theme.Shapes.tailShape
+        Theme.Assets.tailShape
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(height: 100)
