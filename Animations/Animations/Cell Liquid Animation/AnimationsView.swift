@@ -13,31 +13,38 @@ struct AnimationsView: View {
     
     var body: some View {
        
-        ScrollView(.vertical, showsIndicators: false) {
-            
-            VStack(spacing: 12) {
+        NavigationView {
+            ScrollView(.vertical, showsIndicators: false) {
                 
-                HeaderView()
-                    .padding(15)
-                
-                ForEach(animations) { animation in
+                VStack(spacing: 12) {
                     
-                    GooeyCell(animation: animation) {
+                    HeaderView()
+                        .padding(15)
+                    
+                    ForEach(animations) { animation in
+                        NavigationLink {
+                            
+                            DestinationView(from: animation)
+                            
+                        } label: {
+                            GooeyCell(animation: animation) {
 
-                        let _ = withAnimation(.easeIn(duration: 0.3)) {
-                        
-                            animations.remove(at: indexOf(animation: animation))
+                                let _ = withAnimation(.easeIn(duration: 0.3)) {
+                                
+                                    animations.remove(at: indexOf(animation: animation))
+                                }
+                            }
                         }
                     }
                 }
+                .padding(.vertical, 15)
             }
-            .padding(.vertical, 15)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+                Theme.Colors.bgGray
+                    .ignoresSafeArea()
+            )
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-            Theme.Colors.bgGray
-                .ignoresSafeArea()
-        )
     }
     
     func indexOf(animation: Animation) -> Int {
@@ -49,6 +56,17 @@ struct AnimationsView: View {
         }
             
         return 0
+    }
+    
+    @ViewBuilder
+    func DestinationView(from animation: Animation) -> some View {
+        
+        switch animation.type {
+        case .clubbed:
+            ClubbedAnimation()
+        case .singleMetaball:
+            SingleMetaBallAnimation()
+        }
     }
     
     
@@ -71,7 +89,6 @@ struct AnimationsView: View {
                     .foregroundColor(Theme.Colors.green)
                 
             }
-
         }
     }
 }
