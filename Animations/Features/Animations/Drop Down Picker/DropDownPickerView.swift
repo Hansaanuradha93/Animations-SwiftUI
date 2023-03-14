@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+/**
+ The DropDownPickerView class is responsible for making a dropdown with dynamic selection.
+ 
+ - Parameters:
+ - Youtube: https://www.youtube.com/watch?v=_TqEG3bAaeg
+ - Source Code: https://www.patreon.com/posts/swiftui-drop-14-76929420
+**/
+
 struct DropDownPickerView: View {
     
     let content = ["Easy", "Normal", "Hard", "Expert"]
