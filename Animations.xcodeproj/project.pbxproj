@@ -11,6 +11,8 @@
 		4789513529B5E831006B4179 /* ClubbedAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4789513429B5E831006B4179 /* ClubbedAnimation.swift */; };
 		4789513E29B5F0F7006B4179 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4789513D29B5F0F7006B4179 /* Theme.swift */; };
 		47E6BB9B29BD8E2500366CB7 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E6BB9A29BD8E2500366CB7 /* Animation.swift */; };
+		47E6BB9F29BDDEAF00366CB7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E6BB9E29BDDEAF00366CB7 /* SettingsView.swift */; };
+		47E6BBA329BDDF9900366CB7 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E6BBA229BDDF9900366CB7 /* UserDefaultsKeys.swift */; };
 		47EE3D1629B4F4CA00FBAAF4 /* AnimationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE3D1529B4F4CA00FBAAF4 /* AnimationsApp.swift */; };
 		47EE3D1A29B4F4CC00FBAAF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47EE3D1929B4F4CC00FBAAF4 /* Assets.xcassets */; };
 		47EE3D1D29B4F4CC00FBAAF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47EE3D1C29B4F4CC00FBAAF4 /* Preview Assets.xcassets */; };
@@ -22,6 +24,8 @@
 		4789513429B5E831006B4179 /* ClubbedAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubbedAnimation.swift; sourceTree = "<group>"; };
 		4789513D29B5F0F7006B4179 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		47E6BB9A29BD8E2500366CB7 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		47E6BB9E29BDDEAF00366CB7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		47E6BBA229BDDF9900366CB7 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		47EE3D1229B4F4CA00FBAAF4 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47EE3D1529B4F4CA00FBAAF4 /* AnimationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsApp.swift; sourceTree = "<group>"; };
 		47EE3D1929B4F4CC00FBAAF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +119,39 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		47E6BB9C29BDDE7A00366CB7 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				47E6BB9D29BDDE9B00366CB7 /* Settings */,
+				47E6BB9829BD8DC200366CB7 /* Animations */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		47E6BB9D29BDDE9B00366CB7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				47E6BB9E29BDDEAF00366CB7 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		47E6BBA029BDDF7400366CB7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				47E6BBA129BDDF8400366CB7 /* User Defaults */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		47E6BBA129BDDF8400366CB7 /* User Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				47E6BBA229BDDF9900366CB7 /* UserDefaultsKeys.swift */,
+			);
+			path = "User Defaults";
+			sourceTree = "<group>";
+		};
 		47EE3D0929B4F4CA00FBAAF4 = {
 			isa = PBXGroup;
 			children = (
@@ -135,7 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				47E6BB9929BD8E1600366CB7 /* Model */,
-				47E6BB9829BD8DC200366CB7 /* Animations */,
+				47E6BB9C29BDDE7A00366CB7 /* Features */,
+				47E6BBA029BDDF7400366CB7 /* Base */,
 				4789513929B5F069006B4179 /* Resources */,
 				4789513729B5F020006B4179 /* App */,
 				47EE3D1B29B4F4CC00FBAAF4 /* Preview Content */,
@@ -221,9 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E6BB9F29BDDEAF00366CB7 /* SettingsView.swift in Sources */,
 				474370E929BC5BA7000BF726 /* AnimationsView.swift in Sources */,
 				4789513E29B5F0F7006B4179 /* Theme.swift in Sources */,
 				4789513529B5E831006B4179 /* ClubbedAnimation.swift in Sources */,
+				47E6BBA329BDDF9900366CB7 /* UserDefaultsKeys.swift in Sources */,
 				47EE3D2529B4F5C100FBAAF4 /* SingleMetaBallAnimation.swift in Sources */,
 				47EE3D1629B4F4CA00FBAAF4 /* AnimationsApp.swift in Sources */,
 				47E6BB9B29BD8E2500366CB7 /* Animation.swift in Sources */,

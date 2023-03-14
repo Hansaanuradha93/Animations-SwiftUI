@@ -9,10 +9,27 @@ import SwiftUI
 
 @main
 struct AnimationsApp: App {
+    
+    @AppStorage(UserDefaultsKeys.appColorScheme) private var isDarkMode = false
+
     var body: some Scene {
+        
         WindowGroup {
-            AnimationsView()
-//                .preferredColorScheme(.light)
+            
+            TabView {
+                AnimationsView()
+                    .tabItem {
+                        Theme.Assets.home
+                        Text("Home")
+                    }
+
+                SettingsView()
+                    .tabItem {
+                        Theme.Assets.gear
+                        Text("Settings")
+                    }
+            }
+            .preferredColorScheme(isDarkMode ? .dark : .light)
         }
     }
 }

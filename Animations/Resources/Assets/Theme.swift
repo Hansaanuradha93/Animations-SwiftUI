@@ -29,6 +29,10 @@ struct Theme {
     
     struct Assets {
         
+        // MARK: Common
+        static let home = Image(systemName: "house")
+        static let gear = Image(systemName: "gear")
+        
         // MARK: Cell Liquid Animation
         static let cellLiquid = Image("cell-liquid")
         static let clubbed = Image("clubbed")
@@ -39,5 +43,3 @@ struct Theme {
         static let xmark = Image(systemName: "xmark")
     }
 }
-
-//141617
