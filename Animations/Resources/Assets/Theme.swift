@@ -41,5 +41,8 @@ struct Theme {
         
         static let magnifyingGlass = Image(systemName: "magnifyingglass")
         static let xmark = Image(systemName: "xmark")
+        
+        // MARK: Dropdown Pricker
+        static let chevronUpDown = Image(systemName: "chevron.up.chevron.down")
     }
 }
