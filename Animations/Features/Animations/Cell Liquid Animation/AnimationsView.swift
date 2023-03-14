@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+/**
+ The AnimationsView class is responsible for listing the list of animations while allowing the user to delete item from the list with an animation.
+ 
+ - Parameters:
+ - Youtube: https://www.youtube.com/watch?v=p8GfGbMPvEs&list=WL&index=19
+ - Source Code: https://www.patreon.com/posts/early-access-14-73950692
+
+**/
+
 struct AnimationsView: View {
 
     @State var animations = Animation.animations
