@@ -104,19 +104,19 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		47D2254229C0C60F00D5D236 /* Drop Down Picker */ = {
+		47D2254229C0C60F00D5D236 /* Dynamic Drop Down Picker */ = {
 			isa = PBXGroup;
 			children = (
 				47D2254329C0C64400D5D236 /* DropDownPickerView.swift */,
 			);
-			path = "Drop Down Picker";
+			path = "Dynamic Drop Down Picker";
 			sourceTree = "<group>";
 		};
 		47E6BB9829BD8DC200366CB7 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				47D2254229C0C60F00D5D236 /* Drop Down Picker */,
 				474370E329BC5AD2000BF726 /* Cell Liquid Animation */,
+				47D2254229C0C60F00D5D236 /* Dynamic Drop Down Picker */,
 				474370E229BC5554000BF726 /* Metaball Animation */,
 			);
 			path = Animations;

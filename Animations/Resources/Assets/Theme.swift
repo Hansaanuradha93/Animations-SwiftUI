@@ -43,6 +43,7 @@ struct Theme {
         static let xmark = Image(systemName: "xmark")
         
         // MARK: Dropdown Pricker
+        static let dynamicDropDown = Image("dynamic-drop-down")
         static let chevronUpDown = Image(systemName: "chevron.up.chevron.down")
     }
 }

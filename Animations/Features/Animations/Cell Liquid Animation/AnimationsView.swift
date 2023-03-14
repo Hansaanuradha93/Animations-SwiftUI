@@ -73,6 +73,8 @@ struct AnimationsView: View {
     func DestinationView(from animation: Animation) -> some View {
         
         switch animation.type {
+        case .dynamicDropDown:
+            DropDownPickerView()
         case .clubbed:
             ClubbedAnimation()
         case .singleMetaball:
@@ -133,7 +135,7 @@ struct GooeyCell: View {
                 VStack(alignment: .leading, spacing: 12) {
                     HStack {
                         
-                        Image(animation.logo)
+                        animation.logo
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 22, height: 22)
