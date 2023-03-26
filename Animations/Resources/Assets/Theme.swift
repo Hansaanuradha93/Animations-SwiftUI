@@ -43,6 +43,18 @@ struct Theme {
         static let chevronUpDown = Image(systemName: "chevron.up.chevron.down")
     }
     
+    // MARK: - AppleMusicBottomSheetAnimation
+    struct AppleMusicBottomSheetAnimation {
+        
+        /// Colors
+        static let bg = Color("BG")
+        
+        /// Assets
+        static let card1 = Image("Card-1")
+        static let card2 = Image("Card-2")
+        static let artwork = Image("Artwork")
+    }
+    
     // MARK: Common
     struct Common {
         
