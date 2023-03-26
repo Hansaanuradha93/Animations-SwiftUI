@@ -270,7 +270,7 @@ struct GooeyCell: View {
         let scale = finishAnimation ? -0.0001 : offsetX / width
         let circleOffset = offsetX / width
         
-        Theme.Assets.tailShape
+        Theme.CellLiquidAnimation.tailShape
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(height: 100)

@@ -25,6 +25,12 @@ struct Theme {
         static let bgGray = Color("Bg-Gray")
         static let green = Color("Green")
         static let cellBg = Color("Cell-BG")
+        
+        /// Assets
+        static let cellLiquid = Image("cell-liquid")
+        static let clubbed = Image("clubbed")
+        static let singleMetaball = Image("single-metaball")
+        static let tailShape = Image("tail-shape")
     }
     
     struct DropDownPickerAnimation {
@@ -39,13 +45,7 @@ struct Theme {
         // MARK: Common
         static let home = Image(systemName: "house")
         static let gear = Image(systemName: "gear")
-        
-        // MARK: Cell Liquid Animation
-        static let cellLiquid = Image("cell-liquid")
-        static let clubbed = Image("clubbed")
-        static let singleMetaball = Image("single-metaball")
-        static let tailShape = Image("tail-shape")
-        
+                
         static let magnifyingGlass = Image(systemName: "magnifyingglass")
         static let xmark = Image(systemName: "xmark")
     }
