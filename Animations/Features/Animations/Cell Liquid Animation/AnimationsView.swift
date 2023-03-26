@@ -52,7 +52,7 @@ struct AnimationsView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(
-                Theme.Colors.bgGray
+                Theme.CellLiquidAnimation.bgGray
                     .ignoresSafeArea()
             )
         }
@@ -90,7 +90,7 @@ struct AnimationsView: View {
             
             Text("Animations")
                 .font(.system(size: 28, weight: .bold))
-                .foregroundColor(Theme.Colors.green)
+                .foregroundColor(Theme.CellLiquidAnimation.green)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             Button {
@@ -99,7 +99,7 @@ struct AnimationsView: View {
                 
                 Theme.Assets.magnifyingGlass
                     .font(.title2)
-                    .foregroundColor(Theme.Colors.green)
+                    .foregroundColor(Theme.CellLiquidAnimation.green)
                 
             }
         }
@@ -158,13 +158,13 @@ struct GooeyCell: View {
                 Text("29 OCT")
                     .font(.caption)
                     .fontWeight(.semibold)
-                    .foregroundColor(Theme.Colors.green.opacity(0.7))
+                    .foregroundColor(Theme.CellLiquidAnimation.green.opacity(0.7))
             }
             .padding(.horizontal, 15)
             .padding(.vertical, 10)
             .background {
                 RoundedRectangle(cornerRadius: 15, style: .continuous)
-                    .fill(Theme.Colors.cellBg)
+                    .fill(Theme.CellLiquidAnimation.cellBg)
             }
             .opacity(1.0 - progress)
             .blur(radius: progress * 5.0)
@@ -232,7 +232,7 @@ struct GooeyCell: View {
         
         Canvas { ctx, size in
             
-            ctx.addFilter(.alphaThreshold(min: 0.5, color: Theme.Colors.green))
+            ctx.addFilter(.alphaThreshold(min: 0.5, color: Theme.CellLiquidAnimation.green))
             ctx.addFilter(.blur(radius: 5))
             
             ctx.drawLayer { layer in

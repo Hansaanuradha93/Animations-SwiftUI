@@ -9,22 +9,22 @@ import SwiftUI
 
 struct Theme {
     
-    struct Colors {
+    struct MetaballAnimation {
         
-        // MARK: Metaball Animation
+        /// Colors
         static let teal = Color("Teal")
         static let darkYellow = Color("Dark-Yellow")
         
-        // MARK: Cell Liquid Animation
+        /// Gradients
+        static let tealToDarkYellowTopToBottom = LinearGradient(colors: [Theme.MetaballAnimation.teal, Theme.MetaballAnimation.darkYellow], startPoint: .top, endPoint: .bottom)
+    }
+    
+    struct CellLiquidAnimation {
+        
+        /// Colors
         static let bgGray = Color("Bg-Gray")
         static let green = Color("Green")
         static let cellBg = Color("Cell-BG")
-    }
-    
-    struct Gradients {
-        
-        // MARK: Metaball Animation
-        static let tealToDarkYellowTopToBottom = LinearGradient(colors: [Theme.Colors.teal, Theme.Colors.darkYellow], startPoint: .top, endPoint: .bottom)
     }
     
     struct Assets {

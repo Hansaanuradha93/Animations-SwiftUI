@@ -34,7 +34,7 @@ struct DropDownPickerView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         .background(
-            Theme.Colors.bgGray
+            Theme.CellLiquidAnimation.bgGray
                 .ignoresSafeArea()
         )
     }
