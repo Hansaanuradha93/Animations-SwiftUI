@@ -88,7 +88,7 @@ struct DropDown: View {
         .frame(height: dropdownItemHeight)
         .overlay(alignment: .trailing) {
             
-            Theme.Assets.chevronUpDown
+            Theme.DropDownPickerAnimation.chevronUpDown
                 .padding(.trailing, 10)
         }
         .mask(alignment: .top) {

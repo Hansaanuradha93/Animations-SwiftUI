@@ -27,6 +27,13 @@ struct Theme {
         static let cellBg = Color("Cell-BG")
     }
     
+    struct DropDownPickerAnimation {
+        
+        /// Assets
+        static let dynamicDropDown = Image("dynamic-drop-down")
+        static let chevronUpDown = Image(systemName: "chevron.up.chevron.down")
+    }
+    
     struct Assets {
         
         // MARK: Common
@@ -41,9 +48,5 @@ struct Theme {
         
         static let magnifyingGlass = Image(systemName: "magnifyingglass")
         static let xmark = Image(systemName: "xmark")
-        
-        // MARK: Dropdown Pricker
-        static let dynamicDropDown = Image("dynamic-drop-down")
-        static let chevronUpDown = Image(systemName: "chevron.up.chevron.down")
     }
 }
