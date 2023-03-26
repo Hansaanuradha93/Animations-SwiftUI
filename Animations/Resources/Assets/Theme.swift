@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Theme {
     
+    // MARK: MetaballAnimation
     struct MetaballAnimation {
         
         /// Colors
@@ -19,6 +20,7 @@ struct Theme {
         static let tealToDarkYellowTopToBottom = LinearGradient(colors: [Theme.MetaballAnimation.teal, Theme.MetaballAnimation.darkYellow], startPoint: .top, endPoint: .bottom)
     }
     
+    // MARK: CellLiquidAnimation
     struct CellLiquidAnimation {
         
         /// Colors
@@ -33,6 +35,7 @@ struct Theme {
         static let tailShape = Image("tail-shape")
     }
     
+    // MARK: DropDownPickerAnimation
     struct DropDownPickerAnimation {
         
         /// Assets
@@ -40,12 +43,12 @@ struct Theme {
         static let chevronUpDown = Image(systemName: "chevron.up.chevron.down")
     }
     
-    struct Assets {
+    // MARK: Common
+    struct Common {
         
-        // MARK: Common
+        /// Assets
         static let home = Image(systemName: "house")
         static let gear = Image(systemName: "gear")
-                
         static let magnifyingGlass = Image(systemName: "magnifyingglass")
         static let xmark = Image(systemName: "xmark")
     }

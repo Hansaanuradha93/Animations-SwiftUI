@@ -97,7 +97,7 @@ struct AnimationsView: View {
                 
             } label: {
                 
-                Theme.Assets.magnifyingGlass
+                Theme.Common.magnifyingGlass
                     .font(.title2)
                     .foregroundColor(Theme.CellLiquidAnimation.green)
                 
@@ -249,7 +249,7 @@ struct GooeyCell: View {
         /// Icon View
         .overlay(alignment: .trailing) {
             
-            Theme.Assets.xmark
+            Theme.Common.xmark
                 .fontWeight(.semibold)
                 .foregroundColor(.white)
                 .frame(width: 42, height: 42)

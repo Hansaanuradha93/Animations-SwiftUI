@@ -19,13 +19,13 @@ struct AnimationsApp: App {
             TabView {
                 AnimationsView()
                     .tabItem {
-                        Theme.Assets.home
+                        Theme.Common.home
                         Text("Home")
                     }
 
                 SettingsView()
                     .tabItem {
-                        Theme.Assets.gear
+                        Theme.Common.gear
                         Text("Settings")
                     }
             }
