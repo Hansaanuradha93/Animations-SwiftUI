@@ -46,7 +46,7 @@ struct CustomBottomSheetView: View {
     }
 }
 
-struct CustomTabView_Previews: PreviewProvider {
+struct CustomBottomSheetView_Previews: PreviewProvider {
     static var previews: some View {
         CustomTabView()
             .preferredColorScheme(.dark)

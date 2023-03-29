@@ -55,3 +55,12 @@ struct CustomTabView: View {
             .toolbarBackground(.ultraThinMaterial, for: .tabBar)
     }
 }
+
+struct CustomTabView_Previews: PreviewProvider {
+    @Namespace static var namespace
+
+    static var previews: some View {
+        CustomTabView()
+        .preferredColorScheme(.dark)
+    }
+}
