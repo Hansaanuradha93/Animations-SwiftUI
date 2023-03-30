@@ -45,14 +45,18 @@ struct CustomTabView: View {
     
     @ViewBuilder
     func Tab(title: String, icon: Image, item: some View) -> some View {
-        
-        item
-            .tabItem {
-                icon
-                Text(title)
-            }
-            .toolbarBackground(.visible, for: .tabBar)
-            .toolbarBackground(.ultraThinMaterial, for: .tabBar)
+        /// iOS Bug, It Can Be Avoided With Wrapping The View In A ScrollView
+        ScrollView {
+            item
+        }
+        .tabItem {
+            icon
+            Text(title)
+        }
+        .toolbarBackground(.visible, for: .tabBar)
+        .toolbarBackground(.ultraThinMaterial, for: .tabBar)
+        /// Hide The Tab Bar When Sheet Is Expanded
+        .toolbar(expandSheet ? .hidden : .visible, for: .tabBar)
     }
 }
 
