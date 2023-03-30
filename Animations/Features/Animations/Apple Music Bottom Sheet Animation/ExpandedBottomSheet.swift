@@ -62,6 +62,9 @@ struct ExpandedBottomSheet: View {
                     .matchedGeometryEffect(id: "ARTWORK", in: animation)
                     /// For Square Artwork Image
                     .frame(width: size.width - 50)
+                    
+                    /// Player View
+                    PlayerView(size)
                 }
                 .padding(.top, safeAreaInsets.top + (safeAreaInsets.bottom == 0 ? 10 : 0))
                 .padding(.bottom, safeAreaInsets.bottom == 0 ? 10 : safeAreaInsets.bottom)
@@ -82,6 +85,11 @@ struct ExpandedBottomSheet: View {
                 animatedContent = true
             }
         }
+    }
+    
+    @ViewBuilder
+    func PlayerView(_ mainSize: CGSize) -> some View {
+        
     }
 }
 
