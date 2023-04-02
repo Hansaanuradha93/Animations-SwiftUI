@@ -65,11 +65,14 @@ struct ExpandedBottomSheet: View {
                     
                     /// Player View
                     PlayerView(size)
+                    /// Moving It From Bottom
+                        .offset(y: animatedContent ? 0 : size.height)
                 }
                 .padding(.top, safeAreaInsets.top + (safeAreaInsets.bottom == 0 ? 10 : 0))
                 .padding(.bottom, safeAreaInsets.bottom == 0 ? 10 : safeAreaInsets.bottom)
                 .padding(.horizontal, 25)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                .clipped()
                 /// For Testing UI
                 .onTapGesture {
                     withAnimation(.easeInOut(duration: 0.3)) {
@@ -90,6 +93,48 @@ struct ExpandedBottomSheet: View {
     @ViewBuilder
     func PlayerView(_ mainSize: CGSize) -> some View {
         
+        GeometryReader { proxy in
+            let size = proxy.size
+            
+            /// Dynamic Heigh Using Available Height
+            let spacing = size.height * 0.04
+            
+            VStack(spacing: spacing) {
+                
+                VStack(spacing: spacing) {
+                    
+                    HStack(alignment: .center, spacing: 15) {
+                        
+                        VStack(alignment: .leading, spacing: 4) {
+                            
+                            Text("Look What You Made Me Do")
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                            
+                            Text("Taylor Swift")
+                                .foregroundColor(.gray)
+                            
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "ellipsis")
+                                .foregroundColor(.white)
+                                .padding(12)
+                                .background {
+                                    Circle()
+                                        .fill(.ultraThinMaterial)
+                                        .environment(\.colorScheme, .light)
+                                    
+                                }
+                        }
+
+                    }
+                }
+           }
+        }
     }
 }
 
