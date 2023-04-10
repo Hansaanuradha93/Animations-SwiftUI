@@ -19,6 +19,7 @@ import SwiftUI
 struct AnimationsView: View {
 
     @State var animations = Animation.animations
+    @Binding var showAppleMusicBottomSheet: Bool
     
     private let columns = Array(repeating: GridItem(.flexible()), count: 1)
     
@@ -80,7 +81,7 @@ struct AnimationsView: View {
         case .singleMetaball:
             SingleMetaBallAnimation()
         case .appleMusicBottomSheet:
-            AppleMusicHomeView()
+            AppleMusicHomeView(showAppleMusicBottomSheet: $showAppleMusicBottomSheet)
         }
     }
     
@@ -110,7 +111,7 @@ struct AnimationsView: View {
 
 struct AnimationsView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimationsView()
+        AnimationsView(showAppleMusicBottomSheet: .constant(false))
     }
 }
 

@@ -17,6 +17,9 @@ import SwiftUI
 **/
 
 struct AppleMusicHomeView: View {
+    
+    @Binding var showAppleMusicBottomSheet: Bool
+    
     var body: some View {
         
         NavigationView {
@@ -43,11 +46,21 @@ struct AppleMusicHomeView: View {
                 .padding()
             }
         }
+        .onAppear {
+            withAnimation(.easeInOut(duration: 0.3)) {
+                showAppleMusicBottomSheet = true
+            }
+        }
+        .onDisappear {
+            withAnimation(.easeInOut(duration: 0.3)) {
+                showAppleMusicBottomSheet = false
+            }
+        }
     }
 }
 
 struct AppleMusicHomeView_Previews: PreviewProvider {
     static var previews: some View {
-        AppleMusicHomeView()
+        AppleMusicHomeView(showAppleMusicBottomSheet: .constant(true))
     }
 }

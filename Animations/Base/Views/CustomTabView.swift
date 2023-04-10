@@ -15,28 +15,34 @@ struct CustomTabView: View {
     /// Animation Properties
     @State private var expandSheet: Bool = false
     @Namespace private var animation
+    
+    /// View State Properties
+    @State var showAppleMusicBottomSheet: Bool = false
+    
 
     var body: some View {
         
         TabView {
             Tab(title: "Home",
                 icon: Theme.Common.home,
-                item: AnimationsView())
+                item: AnimationsView(showAppleMusicBottomSheet: $showAppleMusicBottomSheet))
             
             Tab(title: "Settings",
                 icon: Theme.Common.gear,
                 item: SettingsView())
         }
-        // TODO: Uncomment the below line
-//        .preferredColorScheme(isDarkMode ? .dark : .light)
+        .preferredColorScheme(isDarkMode ? .dark : .light)
         .safeAreaInset(edge: .bottom) {
-            CustomBottomSheetView(expandSheet: $expandSheet,
-                                  animation: animation)
-            /// Transition For More Fluent Animation
-            .transition(.asymmetric(insertion: .identity, removal: .offset(y: -5)))
+            
+            if showAppleMusicBottomSheet {
+                CustomBottomSheetView(expandSheet: $expandSheet,
+                                      animation: animation)
+                /// Transition For More Fluent Animation
+                .transition(.asymmetric(insertion: .identity, removal: .offset(y: -5)))
+            }
         }
         .overlay {
-            if expandSheet {
+            if showAppleMusicBottomSheet && expandSheet {
                 ExpandedBottomSheet(expandSheet: $expandSheet,
                                     animation: animation)
             }
@@ -45,18 +51,15 @@ struct CustomTabView: View {
     
     @ViewBuilder
     func Tab(title: String, icon: Image, item: some View) -> some View {
-        /// iOS Bug, It Can Be Avoided With Wrapping The View In A ScrollView
-        ScrollView {
-            item
-        }
-        .tabItem {
-            icon
-            Text(title)
-        }
-        .toolbarBackground(.visible, for: .tabBar)
-        .toolbarBackground(.ultraThinMaterial, for: .tabBar)
-        /// Hide The Tab Bar When Sheet Is Expanded
-        .toolbar(expandSheet ? .hidden : .visible, for: .tabBar)
+        item
+            .tabItem {
+                icon
+                Text(title)
+            }
+            .toolbarBackground(.visible, for: .tabBar)
+            .toolbarBackground(.ultraThinMaterial, for: .tabBar)
+            /// Hide The Tab Bar When Sheet Is Expanded
+            .toolbar(expandSheet ? .hidden : .visible, for: .tabBar)
     }
 }
 
