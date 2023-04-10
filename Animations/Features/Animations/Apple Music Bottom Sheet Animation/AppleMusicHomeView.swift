@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+/**
+ The AppleMusicHomeView class is responsible to mimic apple music bottom sheet animation while allowing the user to drag the bottom sheet up and down.
+ 
+ - Parameters:
+ - Youtube: https://www.youtube.com/watch?v=_KohThDWl5Y
+ - Source Code: https://www.patreon.com/kavsoft/posts
+
+**/
+
 struct AppleMusicHomeView: View {
     var body: some View {
         
