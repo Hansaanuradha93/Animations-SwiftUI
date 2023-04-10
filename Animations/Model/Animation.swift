@@ -11,6 +11,7 @@ import SwiftUI
 struct Animation: Identifiable {
     
     enum AnimationType {
+        case appleMusicBottomSheet
         case dynamicDropDown
         case clubbed
         case singleMetaball
@@ -28,6 +29,8 @@ struct Animation: Identifiable {
 extension Animation {
     
     static let animations: [Animation] = [
+        Animation(name: "Bottom Sheet Animation", title: "Bottom sheet animation like Apple Mucis", subTitle: "Apple music app bottom sheet animation", logo: Theme.AppleMusicBottomSheetAnimation.appleMusic, type: .appleMusicBottomSheet),
+        
         Animation(name: "Dynamic Drop Down", title: "Drop down picker with dynamic selection", subTitle: "We have got multiple items drop down picker with dynamic selection", logo: Theme.DropDownPickerAnimation.dynamicDropDown, type: .dynamicDropDown),
         
         Animation(name: "Clubbed", title: "Several rectangular shapes animation", subTitle: "We have got several rectangular shapes moving on random directions while overlapping eachother", logo: Theme.CellLiquidAnimation.clubbed, type: .clubbed),
