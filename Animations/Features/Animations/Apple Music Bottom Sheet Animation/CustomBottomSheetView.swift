@@ -33,14 +33,6 @@ struct CustomBottomSheetView: View {
             }
         }
         .frame(height: 70)
-        /// Separator Line
-        .overlay(alignment: .bottom, content: {
-            
-            Rectangle()
-                .fill(.gray.opacity(0.3))
-                .frame(height: 1)
-                .offset(y: -5)
-        })
         /// 49: Default Tab Bar Height
         .offset(y: -49)
     }
