@@ -79,6 +79,8 @@ struct AnimationsView: View {
             ClubbedAnimation()
         case .singleMetaball:
             SingleMetaBallAnimation()
+        case .appleMusicBottomSheet:
+            AppleMusicHomeView()
         }
     }
     
