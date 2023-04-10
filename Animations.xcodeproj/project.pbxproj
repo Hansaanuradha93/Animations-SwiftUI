@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		474370E929BC5BA7000BF726 /* AnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474370E829BC5BA7000BF726 /* AnimationsView.swift */; };
 		47788C8729D1E93C00BFE846 /* ExpandedBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47788C8629D1E93C00BFE846 /* ExpandedBottomSheet.swift */; };
+		4782824629E4574400493E5E /* AppleMusicHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4782824529E4574400493E5E /* AppleMusicHomeView.swift */; };
 		4789513529B5E831006B4179 /* ClubbedAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4789513429B5E831006B4179 /* ClubbedAnimation.swift */; };
 		4789513E29B5F0F7006B4179 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4789513D29B5F0F7006B4179 /* Theme.swift */; };
 		47B0A00E29D4838700F2E6F0 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B0A00D29D4838700F2E6F0 /* CustomTabView.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		474370E829BC5BA7000BF726 /* AnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsView.swift; sourceTree = "<group>"; };
 		47788C8629D1E93C00BFE846 /* ExpandedBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedBottomSheet.swift; sourceTree = "<group>"; };
+		4782824529E4574400493E5E /* AppleMusicHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicHomeView.swift; sourceTree = "<group>"; };
 		4789513429B5E831006B4179 /* ClubbedAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubbedAnimation.swift; sourceTree = "<group>"; };
 		4789513D29B5F0F7006B4179 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		47B0A00D29D4838700F2E6F0 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				47788C8629D1E93C00BFE846 /* ExpandedBottomSheet.swift */,
 				47B0A00F29D483F000F2E6F0 /* CustomBottomSheetView.swift */,
 				47B0A01129D4843100F2E6F0 /* MusicInfoView.swift */,
+				4782824529E4574400493E5E /* AppleMusicHomeView.swift */,
 			);
 			path = "Apple Music Bottom Sheet Animation";
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				47B0A01029D483F000F2E6F0 /* CustomBottomSheetView.swift in Sources */,
 				47E6BBA329BDDF9900366CB7 /* UserDefaultsKeys.swift in Sources */,
 				47B0A00E29D4838700F2E6F0 /* CustomTabView.swift in Sources */,
+				4782824629E4574400493E5E /* AppleMusicHomeView.swift in Sources */,
 				47EE3D2529B4F5C100FBAAF4 /* SingleMetaBallAnimation.swift in Sources */,
 				47EE3D1629B4F4CA00FBAAF4 /* AnimationsApp.swift in Sources */,
 				47E6BB9B29BD8E2500366CB7 /* Animation.swift in Sources */,

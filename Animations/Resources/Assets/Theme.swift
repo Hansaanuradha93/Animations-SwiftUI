@@ -53,6 +53,7 @@ struct Theme {
         static let card1 = Image("Card-1")
         static let card2 = Image("Card-2")
         static let artwork = Image("Artwork")
+        static let appleMusic = Image("apple-music")
     }
     
     // MARK: Common
