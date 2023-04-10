@@ -16,3 +16,7 @@ struct AnimationsApp: App {
         }
     }
 }
+
+/// Source Code: https://www.patreon.com/kavsoft/posts
+/// Youtube: https://www.youtube.com/watch?v=_KohThDWl5Y
+/// 14.00

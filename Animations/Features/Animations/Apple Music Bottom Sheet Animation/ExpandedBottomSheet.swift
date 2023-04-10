@@ -15,6 +15,7 @@ struct ExpandedBottomSheet: View {
     
     /// View Properties
     @State private var animatedContent: Bool = false
+    @State private var offsetY: CGFloat = 0
 
     var body: some View {
         
@@ -23,11 +24,11 @@ struct ExpandedBottomSheet: View {
             let safeAreaInsets = proxy.safeAreaInsets
             
             ZStack {
-                
-                Rectangle()
+                /// Making It As Rounded Rectangle With Device Corner Radius
+                RoundedRectangle(cornerRadius: (animatedContent ? deviceCornerRadius : 0), style: .continuous)
                     .fill(.ultraThinMaterial)
                     .overlay(content: {
-                        Rectangle()
+                        RoundedRectangle(cornerRadius: (animatedContent ? deviceCornerRadius : 0), style: .continuous)
                             .fill(Theme.AppleMusicBottomSheetAnimation.bg)
                             .opacity(animatedContent ? 1 : 0)
                     })
@@ -46,6 +47,9 @@ struct ExpandedBottomSheet: View {
                         .fill(.gray)
                         .frame(width: 40, height: 5)
                         .opacity(animatedContent ? 1 : 0)
+                        /// Matching With Slide Animation
+                        .offset(y: animatedContent ? 0 : size.height)
+                    
                     
                     /// Artwork Hero View
                     GeometryReader { proxy in
@@ -56,12 +60,13 @@ struct ExpandedBottomSheet: View {
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: size.width, height: size.width)
-                            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                            .clipShape(RoundedRectangle(cornerRadius: animatedContent ? 15 : 5, style: .continuous))
                         
                     }
                     .matchedGeometryEffect(id: "ARTWORK", in: animation)
                     /// For Square Artwork Image
                     .frame(width: size.width - 50)
+                    .padding(.vertical, 10)
                     
                     /// Player View
                     PlayerView(size)
@@ -73,14 +78,28 @@ struct ExpandedBottomSheet: View {
                 .padding(.horizontal, 25)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 .clipped()
-                /// For Testing UI
-                .onTapGesture {
-                    withAnimation(.easeInOut(duration: 0.3)) {
-                        expandSheet = false
-                        animatedContent = false
-                    }
-                }
             }
+            .contentShape(Rectangle())
+            .offset(y: offsetY)
+            .gesture(
+                DragGesture()
+                    .onChanged({ value in
+                        
+                        let transitionY = value.translation.height
+                        offsetY = ((transitionY > 0) ? transitionY : 0)
+                    }).onEnded({ value in
+                        
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            
+                            if offsetY > size.height * 0.4 {
+                                expandSheet = false
+                                animatedContent = false
+                            } else {
+                                offsetY = .zero
+                            }
+                        }
+                    })
+            )
             .ignoresSafeArea(.container, edges: .all)
         }
         .onAppear {
@@ -99,6 +118,7 @@ struct ExpandedBottomSheet: View {
             /// Dynamic Heigh Using Available Height
             let spacing = size.height * 0.04
             
+            /// Sizing It For More Compact Look
             VStack(spacing: spacing) {
                 
                 VStack(spacing: spacing) {
@@ -132,7 +152,116 @@ struct ExpandedBottomSheet: View {
                         }
 
                     }
+                    
+                    /// Timing Indicator
+                    Capsule()
+                        .fill(.ultraThinMaterial)
+                        .environment(\.colorScheme, .light)
+                        .frame(height: 5)
+                        .padding(.top, spacing)
+                    
+                    /// Timing Label View
+                    HStack {
+                        Text("0:00")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                        
+                        Spacer(minLength: 0)
+                        
+                        Text("3:44")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                    }
                 }
+                /// Moving It To Top
+                .frame(height: size.height / 2.5, alignment: .top)
+                
+                /// Playback Controls
+                HStack(spacing: size.width * 0.18) {
+                    
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "backward.fill")
+                        /// Dynamic Sizing For Smaller To Larger Screens
+                            .font(size.height < 300 ? .title3 : .title)
+                    }
+                    
+                    /// Making The Play/Pause Button Bigger
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "pause.fill")
+                        /// Dynamic Sizing For Smaller To Larger Screens
+                            .font(size.height < 300 ? .largeTitle : .system(size: 50))
+                    }
+                    
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "forward.fill")
+                        /// Dynamic Sizing For Smaller To Larger Screens
+                            .font(size.height < 300 ? .title3 : .title)
+                    }
+
+                }
+                .foregroundColor(.white)
+                .frame(maxHeight: .infinity)
+                
+                /// Volume & Other Controls
+                VStack(spacing: spacing) {
+                    
+                    HStack(spacing: 15) {
+                        
+                        Image(systemName: "speaker.fill")
+                            .foregroundColor(.gray)
+                        
+                        Capsule()
+                            .fill(.ultraThinMaterial)
+                            .environment(\.colorScheme, .light)
+                            .frame(height: 5)
+                        
+                        Image(systemName: "speaker.wave.3.fill")
+                            .foregroundColor(.gray)
+                    }
+                    
+                    HStack(alignment: .top, spacing: size.width * 0.18) {
+                        
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "quote.bubble")
+                                .font(.title2)
+                        }
+                        
+                        VStack(spacing: 6) {
+                            
+                            Button {
+                                
+                            } label: {
+                                Image(systemName: "airpods.gen3")
+                                    .font(.title2)
+                            }
+                            
+                            Text("Hansa's Airpods")
+                                .font(.caption)
+                        }
+                        
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "list.bullet")
+                                .font(.title2)
+                        }
+
+                    }
+                    .foregroundColor(.white)
+                    .blendMode(.overlay)
+                    .padding(.top, spacing)
+                    
+                }
+                /// Moving It To Bottom
+                .frame(height: size.height / 2.5, alignment: .bottom)
            }
         }
     }
@@ -145,5 +274,24 @@ struct ExpandedBottomSheet_Previews: PreviewProvider {
         ExpandedBottomSheet(expandSheet: .constant(true),
                             animation: namespace)
         .preferredColorScheme(.dark)
+    }
+}
+
+extension View {
+    
+    var deviceCornerRadius: CGFloat {
+        
+        let key = "_displayCornerRadius"
+        
+        if let screen = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.screen {
+            
+            if let cornerRadius = screen.value(forKey: key) as? CGFloat {
+                return cornerRadius
+            }
+            
+            return 0
+        }
+        
+        return 0
     }
 }
