@@ -19,6 +19,7 @@ import SwiftUI
 struct AnimationsView: View {
 
     @State var animations = Animation.animations
+    @Binding var showAppleMusicBottomSheet: Bool
     
     private let columns = Array(repeating: GridItem(.flexible()), count: 1)
     
@@ -52,7 +53,7 @@ struct AnimationsView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(
-                Theme.Colors.bgGray
+                Theme.CellLiquidAnimation.bgGray
                     .ignoresSafeArea()
             )
         }
@@ -79,6 +80,8 @@ struct AnimationsView: View {
             ClubbedAnimation()
         case .singleMetaball:
             SingleMetaBallAnimation()
+        case .appleMusicBottomSheet:
+            AppleMusicHomeView(showAppleMusicBottomSheet: $showAppleMusicBottomSheet)
         }
     }
     
@@ -90,16 +93,16 @@ struct AnimationsView: View {
             
             Text("Animations")
                 .font(.system(size: 28, weight: .bold))
-                .foregroundColor(Theme.Colors.green)
+                .foregroundColor(Theme.CellLiquidAnimation.green)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             Button {
                 
             } label: {
                 
-                Theme.Assets.magnifyingGlass
+                Theme.Common.magnifyingGlass
                     .font(.title2)
-                    .foregroundColor(Theme.Colors.green)
+                    .foregroundColor(Theme.CellLiquidAnimation.green)
                 
             }
         }
@@ -108,7 +111,7 @@ struct AnimationsView: View {
 
 struct AnimationsView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimationsView()
+        AnimationsView(showAppleMusicBottomSheet: .constant(false))
     }
 }
 
@@ -158,13 +161,13 @@ struct GooeyCell: View {
                 Text("29 OCT")
                     .font(.caption)
                     .fontWeight(.semibold)
-                    .foregroundColor(Theme.Colors.green.opacity(0.7))
+                    .foregroundColor(Theme.CellLiquidAnimation.green.opacity(0.7))
             }
             .padding(.horizontal, 15)
             .padding(.vertical, 10)
             .background {
                 RoundedRectangle(cornerRadius: 15, style: .continuous)
-                    .fill(Theme.Colors.cellBg)
+                    .fill(Theme.CellLiquidAnimation.cellBg)
             }
             .opacity(1.0 - progress)
             .blur(radius: progress * 5.0)
@@ -232,7 +235,7 @@ struct GooeyCell: View {
         
         Canvas { ctx, size in
             
-            ctx.addFilter(.alphaThreshold(min: 0.5, color: Theme.Colors.green))
+            ctx.addFilter(.alphaThreshold(min: 0.5, color: Theme.CellLiquidAnimation.green))
             ctx.addFilter(.blur(radius: 5))
             
             ctx.drawLayer { layer in
@@ -249,7 +252,7 @@ struct GooeyCell: View {
         /// Icon View
         .overlay(alignment: .trailing) {
             
-            Theme.Assets.xmark
+            Theme.Common.xmark
                 .fontWeight(.semibold)
                 .foregroundColor(.white)
                 .frame(width: 42, height: 42)
@@ -270,7 +273,7 @@ struct GooeyCell: View {
         let scale = finishAnimation ? -0.0001 : offsetX / width
         let circleOffset = offsetX / width
         
-        Theme.Assets.tailShape
+        Theme.CellLiquidAnimation.tailShape
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(height: 100)

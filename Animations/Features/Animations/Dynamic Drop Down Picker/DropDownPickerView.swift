@@ -34,7 +34,7 @@ struct DropDownPickerView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         .background(
-            Theme.Colors.bgGray
+            Theme.CellLiquidAnimation.bgGray
                 .ignoresSafeArea()
         )
     }
@@ -88,7 +88,7 @@ struct DropDown: View {
         .frame(height: dropdownItemHeight)
         .overlay(alignment: .trailing) {
             
-            Theme.Assets.chevronUpDown
+            Theme.DropDownPickerAnimation.chevronUpDown
                 .padding(.trailing, 10)
         }
         .mask(alignment: .top) {

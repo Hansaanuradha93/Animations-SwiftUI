@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "dynamic-drop-down.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "dynamic-drop-down.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

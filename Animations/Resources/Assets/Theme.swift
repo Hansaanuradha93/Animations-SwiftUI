@@ -9,41 +9,60 @@ import SwiftUI
 
 struct Theme {
     
-    struct Colors {
+    // MARK: MetaballAnimation
+    struct MetaballAnimation {
         
-        // MARK: Metaball Animation
+        /// Colors
         static let teal = Color("Teal")
         static let darkYellow = Color("Dark-Yellow")
         
-        // MARK: Cell Liquid Animation
+        /// Gradients
+        static let tealToDarkYellowTopToBottom = LinearGradient(colors: [Theme.MetaballAnimation.teal, Theme.MetaballAnimation.darkYellow], startPoint: .top, endPoint: .bottom)
+    }
+    
+    // MARK: CellLiquidAnimation
+    struct CellLiquidAnimation {
+        
+        /// Colors
         static let bgGray = Color("Bg-Gray")
         static let green = Color("Green")
         static let cellBg = Color("Cell-BG")
-    }
-    
-    struct Gradients {
         
-        // MARK: Metaball Animation
-        static let tealToDarkYellowTopToBottom = LinearGradient(colors: [Theme.Colors.teal, Theme.Colors.darkYellow], startPoint: .top, endPoint: .bottom)
-    }
-    
-    struct Assets {
-        
-        // MARK: Common
-        static let home = Image(systemName: "house")
-        static let gear = Image(systemName: "gear")
-        
-        // MARK: Cell Liquid Animation
+        /// Assets
         static let cellLiquid = Image("cell-liquid")
         static let clubbed = Image("clubbed")
         static let singleMetaball = Image("single-metaball")
         static let tailShape = Image("tail-shape")
+    }
+    
+    // MARK: DropDownPickerAnimation
+    struct DropDownPickerAnimation {
         
-        static let magnifyingGlass = Image(systemName: "magnifyingglass")
-        static let xmark = Image(systemName: "xmark")
-        
-        // MARK: Dropdown Pricker
+        /// Assets
         static let dynamicDropDown = Image("dynamic-drop-down")
         static let chevronUpDown = Image(systemName: "chevron.up.chevron.down")
+    }
+    
+    // MARK: - AppleMusicBottomSheetAnimation
+    struct AppleMusicBottomSheetAnimation {
+        
+        /// Colors
+        static let bg = Color("BG")
+        
+        /// Assets
+        static let card1 = Image("Card-1")
+        static let card2 = Image("Card-2")
+        static let artwork = Image("Artwork")
+        static let appleMusic = Image("apple-music")
+    }
+    
+    // MARK: Common
+    struct Common {
+        
+        /// Assets
+        static let home = Image(systemName: "house")
+        static let gear = Image(systemName: "gear")
+        static let magnifyingGlass = Image(systemName: "magnifyingglass")
+        static let xmark = Image(systemName: "xmark")
     }
 }
