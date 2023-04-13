@@ -82,6 +82,8 @@ struct AnimationsView: View {
             SingleMetaBallAnimation()
         case .appleMusicBottomSheet:
             AppleMusicHomeView(showAppleMusicBottomSheet: $showAppleMusicBottomSheet)
+        case .onboardingScreensAnimationWithLogin:
+            OnboaringWithLoginHome()
         }
     }
     

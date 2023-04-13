@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		473664E229E85B4A00205437 /* OnboaringWithLoginHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473664E129E85B4A00205437 /* OnboaringWithLoginHome.swift */; };
 		474370E929BC5BA7000BF726 /* AnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474370E829BC5BA7000BF726 /* AnimationsView.swift */; };
 		47788C8729D1E93C00BFE846 /* ExpandedBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47788C8629D1E93C00BFE846 /* ExpandedBottomSheet.swift */; };
 		4782824629E4574400493E5E /* AppleMusicHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4782824529E4574400493E5E /* AppleMusicHomeView.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		473664E129E85B4A00205437 /* OnboaringWithLoginHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboaringWithLoginHome.swift; sourceTree = "<group>"; };
 		474370E829BC5BA7000BF726 /* AnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsView.swift; sourceTree = "<group>"; };
 		47788C8629D1E93C00BFE846 /* ExpandedBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedBottomSheet.swift; sourceTree = "<group>"; };
 		4782824529E4574400493E5E /* AppleMusicHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicHomeView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		473664E029E85B2D00205437 /* Onboaring With Login */ = {
+			isa = PBXGroup;
+			children = (
+				473664E129E85B4A00205437 /* OnboaringWithLoginHome.swift */,
+			);
+			path = "Onboaring With Login";
+			sourceTree = "<group>";
+		};
 		474370E229BC5554000BF726 /* Metaball Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +154,7 @@
 		47E6BB9829BD8DC200366CB7 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				473664E029E85B2D00205437 /* Onboaring With Login */,
 				47788C8529D1E91A00BFE846 /* Apple Music Bottom Sheet Animation */,
 				474370E329BC5AD2000BF726 /* Cell Liquid Animation */,
 				47D2254229C0C60F00D5D236 /* Dynamic Drop Down Picker */,
@@ -310,6 +321,7 @@
 				47B0A01229D4843100F2E6F0 /* MusicInfoView.swift in Sources */,
 				47B0A01029D483F000F2E6F0 /* CustomBottomSheetView.swift in Sources */,
 				47E6BBA329BDDF9900366CB7 /* UserDefaultsKeys.swift in Sources */,
+				473664E229E85B4A00205437 /* OnboaringWithLoginHome.swift in Sources */,
 				47B0A00E29D4838700F2E6F0 /* CustomTabView.swift in Sources */,
 				4782824629E4574400493E5E /* AppleMusicHomeView.swift in Sources */,
 				47EE3D2529B4F5C100FBAAF4 /* SingleMetaBallAnimation.swift in Sources */,
