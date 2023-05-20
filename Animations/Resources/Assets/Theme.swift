@@ -9,6 +9,18 @@ import SwiftUI
 
 struct Theme {
     
+    // MARK: VideoPlayer Player
+    struct VideoPlayer {
+        
+        /// Assets
+        static let arrowTraiangleBackwardFill = Image(systemName: "arrowtriangle.backward.fill")
+        static let arrowClockwise = Image(systemName: "arrow.clockwise")
+        static let pauseFill = Image(systemName: "pause.fill")
+        static let playFill = Image(systemName: "play.fill")
+        static let forwardEndFill = Image(systemName: "forward.end.fill")
+        static let backwardEndFill = Image(systemName: "backward.end.fill")
+    }
+    
     // MARK: OnboardingScreensAnimationWithLogin
     struct OnboardingScreensAnimationWithLogin {
         
