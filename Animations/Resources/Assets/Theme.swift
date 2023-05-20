@@ -9,15 +9,38 @@ import SwiftUI
 
 struct Theme {
     
-    // MARK: MetaballAnimation
-    struct MetaballAnimation {
+    // MARK: OnboardingScreensAnimationWithLogin
+    struct OnboardingScreensAnimationWithLogin {
         
         /// Colors
-        static let teal = Color("Teal")
-        static let darkYellow = Color("Dark-Yellow")
+        static let bg = Color("BG")
         
-        /// Gradients
-        static let tealToDarkYellowTopToBottom = LinearGradient(colors: [Theme.MetaballAnimation.teal, Theme.MetaballAnimation.darkYellow], startPoint: .top, endPoint: .bottom)
+        /// Assets
+        static let onboarding = Image("onboarding")
+        static let page1 = Image("Page-1")
+        static let page2 = Image("Page-2")
+        static let page3 = Image("Page-3")
+    }
+    
+    // MARK: AppleMusicBottomSheetAnimation
+    struct AppleMusicBottomSheetAnimation {
+        
+        /// Colors
+        static let bg = Color("BG")
+        
+        /// Assets
+        static let card1 = Image("Card-1")
+        static let card2 = Image("Card-2")
+        static let artwork = Image("Artwork")
+        static let appleMusic = Image("apple-music")
+    }
+    
+    // MARK: DropDownPickerAnimation
+    struct DropDownPickerAnimation {
+        
+        /// Assets
+        static let dynamicDropDown = Image("dynamic-drop-down")
+        static let chevronUpDown = Image(systemName: "chevron.up.chevron.down")
     }
     
     // MARK: CellLiquidAnimation
@@ -35,25 +58,15 @@ struct Theme {
         static let tailShape = Image("tail-shape")
     }
     
-    // MARK: DropDownPickerAnimation
-    struct DropDownPickerAnimation {
-        
-        /// Assets
-        static let dynamicDropDown = Image("dynamic-drop-down")
-        static let chevronUpDown = Image(systemName: "chevron.up.chevron.down")
-    }
-    
-    // MARK: - AppleMusicBottomSheetAnimation
-    struct AppleMusicBottomSheetAnimation {
+    // MARK: MetaballAnimation
+    struct MetaballAnimation {
         
         /// Colors
-        static let bg = Color("BG")
+        static let teal = Color("Teal")
+        static let darkYellow = Color("Dark-Yellow")
         
-        /// Assets
-        static let card1 = Image("Card-1")
-        static let card2 = Image("Card-2")
-        static let artwork = Image("Artwork")
-        static let appleMusic = Image("apple-music")
+        /// Gradients
+        static let tealToDarkYellowTopToBottom = LinearGradient(colors: [Theme.MetaballAnimation.teal, Theme.MetaballAnimation.darkYellow], startPoint: .top, endPoint: .bottom)
     }
     
     // MARK: Common

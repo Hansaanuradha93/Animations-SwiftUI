@@ -15,6 +15,7 @@ struct Animation: Identifiable {
         case dynamicDropDown
         case clubbed
         case singleMetaball
+        case onboardingScreensAnimationWithLogin
     }
     
     var id: String = UUID().uuidString
@@ -29,7 +30,9 @@ struct Animation: Identifiable {
 extension Animation {
     
     static let animations: [Animation] = [
-        Animation(name: "Bottom Sheet Animation", title: "Bottom sheet animation like Apple Mucis", subTitle: "Apple music app bottom sheet animation", logo: Theme.AppleMusicBottomSheetAnimation.appleMusic, type: .appleMusicBottomSheet),
+        Animation(name: "Onboarding Screens Animation", title: "Onboarding Screens Animation", subTitle: "We have onboarding screens animation with Login here", logo: Theme.OnboardingScreensAnimationWithLogin.onboarding, type: .onboardingScreensAnimationWithLogin),
+
+        Animation(name: "Bottom Sheet Animation", title: "Bottom sheet animation like Apple Music", subTitle: "Apple music app bottom sheet animation", logo: Theme.AppleMusicBottomSheetAnimation.appleMusic, type: .appleMusicBottomSheet),
         
         Animation(name: "Dynamic Drop Down", title: "Drop down picker with dynamic selection", subTitle: "We have got multiple items drop down picker with dynamic selection", logo: Theme.DropDownPickerAnimation.dynamicDropDown, type: .dynamicDropDown),
         
