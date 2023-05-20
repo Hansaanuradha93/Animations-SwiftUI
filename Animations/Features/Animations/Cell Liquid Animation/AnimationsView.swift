@@ -84,6 +84,8 @@ struct AnimationsView: View {
             AppleMusicHomeView(showAppleMusicBottomSheet: $showAppleMusicBottomSheet)
         case .onboardingScreensAnimationWithLogin:
             OnboaringWithLoginHome()
+        case .videoPlayer:
+            VideoPlayerView()
         }
     }
     

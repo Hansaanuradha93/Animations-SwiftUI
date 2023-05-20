@@ -13,6 +13,7 @@ struct Theme {
     struct VideoPlayer {
         
         /// Assets
+        static let videoPlayer = Image("video-player")
         static let arrowTraiangleBackwardFill = Image(systemName: "arrowtriangle.backward.fill")
         static let arrowClockwise = Image(systemName: "arrow.clockwise")
         static let pauseFill = Image(systemName: "pause.fill")

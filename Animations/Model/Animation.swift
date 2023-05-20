@@ -16,6 +16,7 @@ struct Animation: Identifiable {
         case clubbed
         case singleMetaball
         case onboardingScreensAnimationWithLogin
+        case videoPlayer
     }
     
     var id: String = UUID().uuidString
@@ -30,6 +31,9 @@ struct Animation: Identifiable {
 extension Animation {
     
     static let animations: [Animation] = [
+        
+        Animation(name: "Video Player", title: "Video Player", subTitle: "We have a custom video player like Youtube that can play videos files", logo: Theme.VideoPlayer.videoPlayer, type: .videoPlayer),
+
         Animation(name: "Onboarding Screens Animation", title: "Onboarding Screens Animation", subTitle: "We have onboarding screens animation with Login here", logo: Theme.OnboardingScreensAnimationWithLogin.onboarding, type: .onboardingScreensAnimationWithLogin),
 
         Animation(name: "Bottom Sheet Animation", title: "Bottom sheet animation like Apple Music", subTitle: "Apple music app bottom sheet animation", logo: Theme.AppleMusicBottomSheetAnimation.appleMusic, type: .appleMusicBottomSheet),
