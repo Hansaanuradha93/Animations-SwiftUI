@@ -85,7 +85,7 @@ struct AnimationsView: View {
         case .onboardingScreensAnimationWithLogin:
             OnboaringWithLoginHome()
         case .videoPlayer:
-            VideoPlayerView()
+            VideoPlayerHomeView()
         }
     }
     

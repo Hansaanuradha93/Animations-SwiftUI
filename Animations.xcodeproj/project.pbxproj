@@ -13,6 +13,8 @@
 		471F52702A18AF2E00021ACB /* Sample Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 471F526F2A18AF2E00021ACB /* Sample Video.mp4 */; };
 		473664E229E85B4A00205437 /* OnboaringWithLoginHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473664E129E85B4A00205437 /* OnboaringWithLoginHome.swift */; };
 		474370E929BC5BA7000BF726 /* AnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474370E829BC5BA7000BF726 /* AnimationsView.swift */; };
+		477393512A1A24AE00F18FFD /* VideoPlayerHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477393502A1A24AE00F18FFD /* VideoPlayerHomeView.swift */; };
+		477393532A1A30B700F18FFD /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477393522A1A30B600F18FFD /* CustomVideoPlayer.swift */; };
 		47788C8729D1E93C00BFE846 /* ExpandedBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47788C8629D1E93C00BFE846 /* ExpandedBottomSheet.swift */; };
 		4782824629E4574400493E5E /* AppleMusicHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4782824529E4574400493E5E /* AppleMusicHomeView.swift */; };
 		4789513529B5E831006B4179 /* ClubbedAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4789513429B5E831006B4179 /* ClubbedAnimation.swift */; };
@@ -37,6 +39,8 @@
 		471F526F2A18AF2E00021ACB /* Sample Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sample Video.mp4"; sourceTree = "<group>"; };
 		473664E129E85B4A00205437 /* OnboaringWithLoginHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboaringWithLoginHome.swift; sourceTree = "<group>"; };
 		474370E829BC5BA7000BF726 /* AnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsView.swift; sourceTree = "<group>"; };
+		477393502A1A24AE00F18FFD /* VideoPlayerHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerHomeView.swift; sourceTree = "<group>"; };
+		477393522A1A30B600F18FFD /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
 		47788C8629D1E93C00BFE846 /* ExpandedBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedBottomSheet.swift; sourceTree = "<group>"; };
 		4782824529E4574400493E5E /* AppleMusicHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicHomeView.swift; sourceTree = "<group>"; };
 		4789513429B5E831006B4179 /* ClubbedAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubbedAnimation.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				471F52682A1887C600021ACB /* VideoPlayerView.swift */,
+				477393502A1A24AE00F18FFD /* VideoPlayerHomeView.swift */,
+				477393522A1A30B600F18FFD /* CustomVideoPlayer.swift */,
 			);
 			path = "Video Player";
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				477393512A1A24AE00F18FFD /* VideoPlayerHomeView.swift in Sources */,
 				47E6BB9F29BDDEAF00366CB7 /* SettingsView.swift in Sources */,
 				474370E929BC5BA7000BF726 /* AnimationsView.swift in Sources */,
 				471F526E2A188B2300021ACB /* View+Ext.swift in Sources */,
@@ -349,6 +356,7 @@
 				47D2254429C0C64400D5D236 /* DropDownPickerView.swift in Sources */,
 				4789513529B5E831006B4179 /* ClubbedAnimation.swift in Sources */,
 				47788C8729D1E93C00BFE846 /* ExpandedBottomSheet.swift in Sources */,
+				477393532A1A30B700F18FFD /* CustomVideoPlayer.swift in Sources */,
 				47B0A01229D4843100F2E6F0 /* MusicInfoView.swift in Sources */,
 				47B0A01029D483F000F2E6F0 /* CustomBottomSheetView.swift in Sources */,
 				47E6BBA329BDDF9900366CB7 /* UserDefaultsKeys.swift in Sources */,
