@@ -7,7 +7,15 @@
 
 import SwiftUI
 
-//https://www.youtube.com/watch?v=4dbnfyXILc4
+/**
+ The SettingsView class is responsible for allowing the user to change app settings with a specific dark mode switch which shows an animation while app is switching from different modes.
+ 
+ - Parameters:
+ - Youtube: https://www.youtube.com/watch?v=4dbnfyXILc4
+ - Source Code: https://www.patreon.com/posts/swiftui-telegram-89940643
+
+**/
+
 struct SettingsView: View {
     
     /// Sample Toggle States
