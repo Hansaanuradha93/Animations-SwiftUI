@@ -77,5 +77,7 @@ struct Theme {
         static let gear = Image(systemName: "gear")
         static let magnifyingGlass = Image(systemName: "magnifyingglass")
         static let xmark = Image(systemName: "xmark")
+        static let sunMaxFill = Image(systemName: "sun.max.fill")
+        static let moonFill = Image(systemName: "moon.fill")
     }
 }

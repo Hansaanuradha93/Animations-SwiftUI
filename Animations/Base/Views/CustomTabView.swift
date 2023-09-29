@@ -9,9 +9,6 @@ import SwiftUI
 
 struct CustomTabView: View {
     
-    /// Local Storage Properties
-    @AppStorage(UserDefaultsKeys.appColorScheme) private var isDarkMode = false
-    
     /// Animation Properties
     @State private var expandSheet: Bool = false
     @Namespace private var animation
@@ -19,6 +16,10 @@ struct CustomTabView: View {
     /// View State Properties
     @State var showAppleMusicBottomSheet: Bool = false
     
+    /// Helpers
+    private var shouldShowExpandedSheet: Bool {
+        return showAppleMusicBottomSheet && expandSheet
+    }
 
     var body: some View {
         
@@ -31,7 +32,6 @@ struct CustomTabView: View {
                 icon: Theme.Common.gear,
                 item: SettingsView())
         }
-        .preferredColorScheme(isDarkMode ? .dark : .light)
         .safeAreaInset(edge: .bottom) {
             
             if showAppleMusicBottomSheet {
@@ -42,7 +42,7 @@ struct CustomTabView: View {
             }
         }
         .overlay {
-            if showAppleMusicBottomSheet && expandSheet {
+            if shouldShowExpandedSheet {
                 ExpandedBottomSheet(expandSheet: $expandSheet,
                                     animation: animation)
             }

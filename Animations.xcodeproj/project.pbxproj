@@ -24,6 +24,8 @@
 		47EE3D1A29B4F4CC00FBAAF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47EE3D1929B4F4CC00FBAAF4 /* Assets.xcassets */; };
 		47EE3D1D29B4F4CC00FBAAF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47EE3D1C29B4F4CC00FBAAF4 /* Preview Assets.xcassets */; };
 		47EE3D2529B4F5C100FBAAF4 /* SingleMetaBallAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE3D2429B4F5C100FBAAF4 /* SingleMetaBallAnimation.swift */; };
+		A190935E2AC5B6C30022A8E3 /* ReckKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A190935D2AC5B6C30022A8E3 /* ReckKey.swift */; };
+		A19093612AC5B7560022A8E3 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19093602AC5B7560022A8E3 /* View+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		47EE3D1929B4F4CC00FBAAF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47EE3D1C29B4F4CC00FBAAF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		47EE3D2429B4F5C100FBAAF4 /* SingleMetaBallAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMetaBallAnimation.swift; sourceTree = "<group>"; };
+		A190935D2AC5B6C30022A8E3 /* ReckKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReckKey.swift; sourceTree = "<group>"; };
+		A19093602AC5B7560022A8E3 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 		47E6BB9829BD8DC200366CB7 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				A190935C2AC5B6A50022A8E3 /* DarkMode */,
 				473664E029E85B2D00205437 /* Onboaring With Login */,
 				47788C8529D1E91A00BFE846 /* Apple Music Bottom Sheet Animation */,
 				474370E329BC5AD2000BF726 /* Cell Liquid Animation */,
@@ -229,6 +234,7 @@
 				47E6BBA029BDDF7400366CB7 /* Base */,
 				4789513929B5F069006B4179 /* Resources */,
 				4789513729B5F020006B4179 /* App */,
+				A190935F2AC5B72E0022A8E3 /* Extensions */,
 				47EE3D1B29B4F4CC00FBAAF4 /* Preview Content */,
 			);
 			path = Animations;
@@ -240,6 +246,22 @@
 				47EE3D1C29B4F4CC00FBAAF4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A190935C2AC5B6A50022A8E3 /* DarkMode */ = {
+			isa = PBXGroup;
+			children = (
+				A190935D2AC5B6C30022A8E3 /* ReckKey.swift */,
+			);
+			path = DarkMode;
+			sourceTree = "<group>";
+		};
+		A190935F2AC5B72E0022A8E3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A19093602AC5B7560022A8E3 /* View+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +340,8 @@
 				47D2254429C0C64400D5D236 /* DropDownPickerView.swift in Sources */,
 				4789513529B5E831006B4179 /* ClubbedAnimation.swift in Sources */,
 				47788C8729D1E93C00BFE846 /* ExpandedBottomSheet.swift in Sources */,
+				A190935E2AC5B6C30022A8E3 /* ReckKey.swift in Sources */,
+				A19093612AC5B7560022A8E3 /* View+Extensions.swift in Sources */,
 				47B0A01229D4843100F2E6F0 /* MusicInfoView.swift in Sources */,
 				47B0A01029D483F000F2E6F0 /* CustomBottomSheetView.swift in Sources */,
 				47E6BBA329BDDF9900366CB7 /* UserDefaultsKeys.swift in Sources */,
@@ -463,7 +487,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,7 +517,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

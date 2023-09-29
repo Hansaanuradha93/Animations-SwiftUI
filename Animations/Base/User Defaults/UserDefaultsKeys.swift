@@ -8,5 +8,6 @@
 import Foundation
 
 enum UserDefaultsKeys {
-    static let appColorScheme = "appColorScheme"
+    static let toggleDarkMode = "toggleDarkMode"
+    static let activateDarkMode = "activateDarkMode"
 }

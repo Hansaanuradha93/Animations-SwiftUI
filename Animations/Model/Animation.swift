@@ -38,6 +38,6 @@ extension Animation {
         
         Animation(name: "Clubbed", title: "Several rectangular shapes animation", subTitle: "We have got several rectangular shapes moving on random directions while overlapping eachother", logo: Theme.CellLiquidAnimation.clubbed, type: .clubbed),
         
-        Animation(name: "Single Metaball", title: "Two cicle shapes animation", subTitle: "We have got two circular shapes moving with touch gestures", logo: Theme.CellLiquidAnimation.singleMetaball, type: .singleMetaball),
+        Animation(name: "Single Metaball", title: "Two cicle shapes animation", subTitle: "We have got two circular shapes moving with touch gestures", logo: Theme.CellLiquidAnimation.singleMetaball, type: .singleMetaball)
     ]
 }
