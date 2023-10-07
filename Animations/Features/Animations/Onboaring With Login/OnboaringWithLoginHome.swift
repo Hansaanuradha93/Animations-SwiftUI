@@ -19,12 +19,48 @@ struct OnboaringWithLoginHome: View {
     
     /// View Properties
     @State private var activeIntro: PageIntro = pageIntros[0]
+    @State private var emailID: String = ""
+    @State private var password: String = ""
     
     var body: some View {
         GeometryReader { geometry in
             let size = geometry.size
             
-            IntroView(intro: $activeIntro, size: size)
+            IntroView(intro: $activeIntro, size: size) {
+                /// User Login / Sign Up View
+                VStack(spacing: 10) {
+                    /// Custom Text Field
+                    CustomTextField(
+                        text: $emailID,
+                        hint: "Email Address",
+                        leadingIcon: Theme.Common.envelope
+                    )
+                    
+                    CustomTextField(
+                        text: $password,
+                        hint: "Password",
+                        leadingIcon: Theme.Common.lock,
+                        isPassword: true
+                    )
+                    
+                    Spacer(minLength: 10)
+                    
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("Continue")
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            .padding(.vertical, 15)
+                            .frame(maxWidth: .infinity)
+                            .background {
+                                Capsule()
+                                    .fill(.black)
+                            }
+                    })
+                }
+                .padding(.top, 25)
+            }
         }
         .padding(15)
     }
@@ -37,10 +73,17 @@ struct OnboaringWithLoginHome_Previews: PreviewProvider {
 }
 
 /// Intro View
-struct IntroView: View {
+struct IntroView<ActionView: View>: View {
     
     @Binding var intro: PageIntro
     var size: CGSize
+    var actionView: ActionView
+    
+    init(intro: Binding<PageIntro>, size: CGSize, actionView: @escaping () -> ActionView) {
+        self._intro = intro
+        self.size = size
+        self.actionView = actionView()
+    }
     
     var body: some View {
         VStack {
@@ -95,21 +138,38 @@ struct IntroView: View {
                     }
                 } else {
                     /// Action View
-                    
+                    actionView
                 }
                 
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
+        /// Back Button
+        .overlay(alignment: .topLeading) {
+            
+            /// Hiding the back button in the first page, since there are not pages before that
+            if intro != pageIntros.first {
+                Button(action: {
+                    changeIntro(toPreviousScreen: true)
+                }, label: {
+                    Theme.Common.chevronLeft
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.black)
+                        .contentShape(Rectangle())
+                })
+                .padding(10)
+            }
+        }
     }
     
     /// Updating Page Intros
-    func changeIntro() {
+    func changeIntro(toPreviousScreen isPrevious: Bool = false) {
         if let index = pageIntros.firstIndex(of: intro),
-           index != pageIntros.count - 1 {
-            intro = pageIntros[index + 1]
+           (isPrevious ? index != 0 : index != pageIntros.count - 1) {
+            intro = isPrevious ? pageIntros[index - 1] : pageIntros[index + 1]
         } else {
-            intro = pageIntros[pageIntros.count - 1]
+            intro = isPrevious ? pageIntros[0] : pageIntros[pageIntros.count - 1]
         }
     }
     

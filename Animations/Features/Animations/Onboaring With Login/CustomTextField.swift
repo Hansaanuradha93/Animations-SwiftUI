@@ -15,7 +15,7 @@ struct CustomTextField: View {
     var isPassword: Bool = false
     
     var body: some View {
-        HStack(spacing: 0) {
+        HStack(spacing: -10) {
             leadingIcon
                 .font(.callout)
                 .foregroundColor(.gray)

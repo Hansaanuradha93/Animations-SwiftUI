@@ -79,5 +79,8 @@ struct Theme {
         static let xmark = Image(systemName: "xmark")
         static let sunMaxFill = Image(systemName: "sun.max.fill")
         static let moonFill = Image(systemName: "moon.fill")
+        static let envelope = Image(systemName: "envelope")
+        static let lock = Image(systemName: "lock")
+        static let chevronLeft = Image(systemName: "chevron.left")
     }
 }
